@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: "main-[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[name]-[hash][ext][query]",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,6 +19,18 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(jpe?g|png|gif|ico)$/,
+        type: "asset/resource",
+      },
+      {
+        test: /\.svg$/,
+        type: "asset/inline",
       },
     ],
   },
