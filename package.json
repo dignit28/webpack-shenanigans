@@ -1,0 +1,17 @@
+{
+  "name": "webpack-shenanigans",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal repo for webpack studying",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  }
+}
